@@ -1,20 +1,42 @@
-version: '3.8'
+version: "3.8"
 
 services:
   db:
-    image: mysql:8.0 
+    image: mysql:8.0
     container_name: mysql_db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root1! 
-      MYSQL_DATABASE: database 
-      MYSQL_USER: admin 
+      MYSQL_ROOT_PASSWORD: root1!
+      MYSQL_DATABASE: database
+      MYSQL_USER: admin
       MYSQL_PASSWORD: admin1!
     ports:
-      - "3306:3306" 
+      - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
-      - ./sql:/docker-entrypoint-initdb.d
+      - ./sql:/docker-entrypoint-initdb.
+
+    networks:
+      - my-network
+  sql-sync:
+    image: mysql:8.0
+    volumes:
+      - ./sql:/sql:ro
+    command: >
+      bash -c "
+        until mysqladmin ping -h db -u root -proot1! --silent; do
+          sleep 5;
+        done;
+        if [ -f \"/sql/database.sql\" ]; then
+          mysql -h db -u root -proot1! database < \"/sql/database.sql\";
+          echo \"Executed /sql/database.sql\";
+        fi
+        echo 'mysql data syncronized complete'
+      "
+
+
+    depends_on:
+      - db
     networks:
       - my-network
 
@@ -27,6 +49,23 @@ services:
     environment:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: root1!
+    depends_on:
+      - db
+    networks:
+      - my-network
+
+  backup:
+    image: mysql:8.0
+    volumes:
+      - ./sql:/backup:rw
+    command: >
+      bash -c "sleep 60; while true; do
+        mysqldump --complete-insert --skip-extended-insert --skip-add-locks --skip-disable-keys --skip-comments -h db -u root -proot1! database > /backup/database.sql;
+        mysqldump --no-data --skip-add-locks --skip-disable-keys --skip-comments -h db -u root -proot1! database > /backup/database_schema.sql;
+        sleep 60;
+      done"
+
+
     depends_on:
       - db
     networks:
