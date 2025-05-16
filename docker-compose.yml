@@ -14,7 +14,29 @@ services:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
-      - ./sql:/docker-entrypoint-initdb.d
+      - ./sql:/docker-entrypoint-initdb.
+
+    networks:
+      - my-network
+  sql-sync:
+    image: mysql:8.0
+    volumes:
+      - ./sql:/sql:ro
+    command: >
+      bash -c "
+        until mysqladmin ping -h db -u root -proot1! --silent; do
+          sleep 5;
+        done;
+        if [ -f \"/sql/database.sql\" ]; then
+          mysql -h db -u root -proot1! database < \"/sql/database.sql\";
+          echo \"Executed /sql/database.sql\";
+        fi
+        echo 'mysql data syncronized complete'
+      "
+
+
+    depends_on:
+      - db
     networks:
       - my-network
 
@@ -37,8 +59,9 @@ services:
     volumes:
       - ./sql:/backup:rw
     command: >
-      bash -c "sleep 30; while true; do
-        mysqldump -h db -u root -proot1! database > /backup/database.sql;
+      bash -c "sleep 60; while true; do
+        mysqldump --complete-insert --skip-extended-insert --skip-add-locks --skip-disable-keys --skip-comments -h db -u root -proot1! database > /backup/database.sql;
+        mysqldump --no-data --skip-add-locks --skip-disable-keys --skip-comments -h db -u root -proot1! database > /backup/database_schema.sql;
         sleep 60;
       done"
 
