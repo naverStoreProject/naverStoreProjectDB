@@ -25,20 +25,22 @@ CREATE TABLE `member` (
   `phone` varchar(255) DEFAULT NULL,
   `pwd` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product` (
-  `price` int NOT NULL,
-  `stock_quantity` int NOT NULL,
-  `category` bigint DEFAULT NULL,
-  `created_at` datetime(6) DEFAULT NULL,
   `id` bigint NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
-  `thumbnailurl` varchar(255) DEFAULT NULL,
-  `description` text,
+  `brand` varchar(255) DEFAULT NULL,
+  `category` bigint DEFAULT NULL,
+  `thumbnail_url` varchar(255) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `price` int NOT NULL,
+  `discount_rate` int DEFAULT 0,
+  `stock_quantity` int NOT NULL,
+  `created_at` datetime(6) DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
