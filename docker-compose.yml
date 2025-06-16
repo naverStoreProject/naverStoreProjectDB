@@ -15,11 +15,13 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
       - ./sql:/docker-entrypoint-initdb.
+      - ./sql/my.cnf:/etc/mysql/conf.d/my.cnf
 
     networks:
       - my-network
   sql-sync:
     image: mysql:8.0
+    container_name: sql-sync
     volumes:
       - ./sql:/sql:ro
     command: >
@@ -56,10 +58,11 @@ services:
 
   backup:
     image: mysql:8.0
+    container_name: mysql_db_backup
     volumes:
       - ./sql:/backup:rw
     command: >
-      bash -c "sleep 60; while true; do
+      bash -c "sleep 180; while true; do
         mysqldump --complete-insert --skip-extended-insert --skip-add-locks --skip-disable-keys --skip-comments -h db -u root -proot1! database > /backup/database.sql;
         mysqldump --no-data --skip-add-locks --skip-disable-keys --skip-comments -h db -u root -proot1! database > /backup/database_schema.sql;
         sleep 60;
