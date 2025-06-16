@@ -1,1 +1,4 @@
 .DS_Store
+
+# 로컬 개발시 설정 오버라이드
+docker-compose.override.yml
