@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3592809f-6334-4017-ad6e-ef1d3c5d0513" name="변경" comment="" />
+    <list default="true" id="3592809f-6334-4017-ad6e-ef1d3c5d0513" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/sql/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/database.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +44,7 @@
     "Docker.docker-compose.yml: Compose 배포.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feat/9/ProductSchema/0619에 #10개",
+    "git-widget-placeholder": "feat/9/ProductSchema/0619",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -101,6 +103,7 @@
       <workItem from="1750306624245" duration="3214000" />
       <workItem from="1750314005905" duration="651000" />
       <workItem from="1750314816703" duration="780000" />
+      <workItem from="1750320576572" duration="3000" />
     </task>
     <servers />
   </component>

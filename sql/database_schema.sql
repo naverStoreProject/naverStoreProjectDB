@@ -75,6 +75,7 @@ CREATE TABLE `product` (
   `stock_quantity` int NOT NULL DEFAULT '0',
   `average_rating` int NOT NULL DEFAULT '0',
   `rating_count` int NOT NULL DEFAULT '0',
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
