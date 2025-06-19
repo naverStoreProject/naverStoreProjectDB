@@ -56,28 +56,27 @@ CREATE TABLE `member_wishlist` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_member_product` (`member_id`,`product_id`),
   KEY `fk_product_id_to_memberWishlist_productId` (`product_id`),
-  CONSTRAINT `fk_member_id__to_memberWishlist_userId` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  CONSTRAINT `fk_product_id_to_memberWishlist_productId` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT `fk_member_id__to_memberWishlist_userId` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product` (
-  `price` int NOT NULL,
-  `stock_quantity` int NOT NULL,
-  `category` bigint DEFAULT NULL,
-  `created_at` datetime(6) DEFAULT NULL,
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `thumbnailurl` varchar(255) DEFAULT NULL,
-  `description` text,
-  `discount_rate` decimal(3,2) DEFAULT NULL,
-  `brand` varchar(255) DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `brand` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `thumbnail_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `main_category` int NOT NULL DEFAULT '999',
+  `sub_category` int NOT NULL DEFAULT '999',
+  `original_price` int NOT NULL DEFAULT '0',
+  `discount_rate` int NOT NULL DEFAULT '0',
+  `stock_quantity` int NOT NULL DEFAULT '0',
+  `average_rating` int NOT NULL DEFAULT '0',
+  `rating_count` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `review`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -95,9 +94,8 @@ CREATE TABLE `review` (
   `user_id` bigint DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `content` text,
-  `rating` decimal(2,1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `review_comment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -112,19 +110,6 @@ CREATE TABLE `review_comment` (
   `content` text,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-DROP TABLE IF EXISTS `review_statistic`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `review_statistic` (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `product_id` bigint NOT NULL,
-  `rating_count` int NOT NULL,
-  `average_rating` decimal(3,2) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_product_id_to_reviewStatistic_productId` (`product_id`),
-  CONSTRAINT `fk_product_id_to_reviewStatistic_productId` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

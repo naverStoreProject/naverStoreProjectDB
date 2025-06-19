@@ -77,8 +77,7 @@ CREATE TABLE `member_wishlist` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_member_product` (`member_id`,`product_id`),
   KEY `fk_product_id_to_memberWishlist_productId` (`product_id`),
-  CONSTRAINT `fk_member_id__to_memberWishlist_userId` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  CONSTRAINT `fk_product_id_to_memberWishlist_productId` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT `fk_member_id__to_memberWishlist_userId` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -86,33 +85,26 @@ INSERT INTO `member_wishlist` (`id`, `member_id`, `product_id`) VALUES (6,1,1);
 INSERT INTO `member_wishlist` (`id`, `member_id`, `product_id`) VALUES (7,1,2);
 INSERT INTO `member_wishlist` (`id`, `member_id`, `product_id`) VALUES (8,5,2);
 INSERT INTO `member_wishlist` (`id`, `member_id`, `product_id`) VALUES (9,10,2);
-
 DROP TABLE IF EXISTS `product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product` (
-  `price` int NOT NULL,
-  `stock_quantity` int NOT NULL,
-  `category` bigint DEFAULT NULL,
-  `created_at` datetime(6) DEFAULT NULL,
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `thumbnailurl` varchar(255) DEFAULT NULL,
-  `description` text,
-  `discount_rate` decimal(3,2) DEFAULT NULL,
-  `brand` varchar(255) DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `brand` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `thumbnail_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `main_category` int NOT NULL DEFAULT '999',
+  `sub_category` int NOT NULL DEFAULT '999',
+  `original_price` int NOT NULL DEFAULT '0',
+  `discount_rate` int NOT NULL DEFAULT '0',
+  `stock_quantity` int NOT NULL DEFAULT '0',
+  `average_rating` int NOT NULL DEFAULT '0',
+  `rating_count` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-INSERT INTO `product` (`price`, `stock_quantity`, `category`, `created_at`, `id`, `name`, `thumbnailurl`, `description`, `discount_rate`, `brand`) VALUES (100000,10,1,'2025-05-14 06:05:38.085564',1,'나이키 에어포스','https://picsum.photos/seed/prod1/300/300','신발임.',0.20,'Nike');
-INSERT INTO `product` (`price`, `stock_quantity`, `category`, `created_at`, `id`, `name`, `thumbnailurl`, `description`, `discount_rate`, `brand`) VALUES (150000,100,2,'2025-05-31 13:09:09.898065',2,'Logitech MX3 master','https://picsum.photos/seed/prod2/300/300','마우스임',0.50,'Logitech');
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
-INSERT INTO `product` (`price`, `stock_quantity`, `category`, `created_at`, `id`, `name`, `thumbnailurl`, `description`) VALUES (100000,10,1,'2025-05-29 08:32:07.449871',1,'AirForce','','신발임.');
-INSERT INTO `product` (`price`, `stock_quantity`, `category`, `created_at`, `id`, `name`, `thumbnailurl`, `description`) VALUES (100000,10,1,'2025-05-29 08:35:18.901374',2,'AirForce','','신발임.');
-INSERT INTO `product` (`price`, `stock_quantity`, `category`, `created_at`, `id`, `name`, `thumbnailurl`, `description`) VALUES (100000,10,1,'2025-06-05 07:06:08.224570',3,'AirForce','','신발임.');
 DROP TABLE IF EXISTS `review`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -129,12 +121,10 @@ CREATE TABLE `review` (
   `user_id` bigint DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `content` text,
-  `rating` decimal(2,1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-INSERT INTO `review` (`blinded`, `deleted`, `dislikes`, `likes`, `verified`, `created_at`, `id`, `product_id`, `updated_at`, `user_id`, `title`, `content`, `rating`) VALUES (_binary '\0',_binary '\0',0,0,_binary '','2025-06-03 00:27:39.000000',1,1,'2025-06-05 00:27:39.000000',1,'사용후기','너무 좋아요.',4.5);
 DROP TABLE IF EXISTS `review_comment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -150,21 +140,6 @@ CREATE TABLE `review_comment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
-DROP TABLE IF EXISTS `review_statistic`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `review_statistic` (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `product_id` bigint NOT NULL,
-  `rating_count` int NOT NULL,
-  `average_rating` decimal(3,2) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_product_id_to_reviewStatistic_productId` (`product_id`),
-  CONSTRAINT `fk_product_id_to_reviewStatistic_productId` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
-INSERT INTO `review_statistic` (`id`, `product_id`, `rating_count`, `average_rating`) VALUES (1,1,1,4.50);
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -174,4 +149,5 @@ INSERT INTO `review_statistic` (`id`, `product_id`, `rating_count`, `average_rat
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
 
