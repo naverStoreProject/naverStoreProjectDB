@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3592809f-6334-4017-ad6e-ef1d3c5d0513" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/sql/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/database.sql" afterDir="false" />
-    </list>
+    <list default="true" id="3592809f-6334-4017-ad6e-ef1d3c5d0513" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
