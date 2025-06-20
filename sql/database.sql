@@ -101,10 +101,12 @@ CREATE TABLE `product` (
   `stock_quantity` int NOT NULL DEFAULT '0',
   `average_rating` int NOT NULL DEFAULT '0',
   `rating_count` int NOT NULL DEFAULT '0',
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+INSERT INTO `product` (`id`, `name`, `brand`, `thumbnail_url`, `description`, `main_category`, `sub_category`, `original_price`, `discount_rate`, `stock_quantity`, `average_rating`, `rating_count`, `created_at`) VALUES (2,'임시 제품명','임시 브랜드명','임시 썸네일','임시 설명문',999,999,0,0,0,0,0,'2025-06-20 02:01:40');
 DROP TABLE IF EXISTS `review`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -149,5 +151,4 @@ CREATE TABLE `review_comment` (
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
 
