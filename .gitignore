@@ -2,3 +2,5 @@
 
 # 로컬 개발시 설정 오버라이드
 docker-compose.override.yml
+
+.idea/workspace.xml
