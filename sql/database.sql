@@ -9,6 +9,61 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+DROP TABLE IF EXISTS `category_child`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `category_child` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `parent_id` int NOT NULL,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_category_parent` (`parent_id`),
+  CONSTRAINT `fk_category_parent` FOREIGN KEY (`parent_id`) REFERENCES `category_parent` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2004 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+INSERT INTO `category_child` (`id`, `parent_id`, `name`) VALUES (101,1,'남성의류 상품 1');
+INSERT INTO `category_child` (`id`, `parent_id`, `name`) VALUES (102,1,'남성의류 상품 2');
+INSERT INTO `category_child` (`id`, `parent_id`, `name`) VALUES (103,1,'남성의류 상품 3');
+INSERT INTO `category_child` (`id`, `parent_id`, `name`) VALUES (201,2,'패션잡화 상품 1');
+INSERT INTO `category_child` (`id`, `parent_id`, `name`) VALUES (202,2,'패션잡화 상품 2');
+INSERT INTO `category_child` (`id`, `parent_id`, `name`) VALUES (203,2,'패션잡화 상품 3');
+INSERT INTO `category_child` (`id`, `parent_id`, `name`) VALUES (301,3,'PC/주변기기 상품 1');
+INSERT INTO `category_child` (`id`, `parent_id`, `name`) VALUES (302,3,'PC/주변기기 상품 2');
+INSERT INTO `category_child` (`id`, `parent_id`, `name`) VALUES (303,3,'PC/주변기기 상품 3');
+INSERT INTO `category_child` (`id`, `parent_id`, `name`) VALUES (2001,20,'기타 상품 1');
+INSERT INTO `category_child` (`id`, `parent_id`, `name`) VALUES (2002,20,'기타 상품 2');
+INSERT INTO `category_child` (`id`, `parent_id`, `name`) VALUES (2003,20,'기타 상품 3');
+DROP TABLE IF EXISTS `category_parent`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `category_parent` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+INSERT INTO `category_parent` (`id`, `name`) VALUES (1,'남성의류');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (2,'패션잡화');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (3,'PC/주변기기');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (4,'스포츠/레저');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (5,'여성의류');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (6,'뷰티');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (7,'가전/디지털');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (8,'식품');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (9,'생활/주방');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (10,'도서/음반');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (11,'자동차용품');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (12,'출산/유아동');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (13,'가구/인테리어');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (14,'문구/사무용품');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (15,'헬스/건강식품');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (16,'여행/레저용품');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (17,'반려동물용품');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (18,'홈데코');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (19,'자동차용품');
+INSERT INTO `category_parent` (`id`, `name`) VALUES (20,'기타');
 DROP TABLE IF EXISTS `main_banner`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -149,5 +204,4 @@ CREATE TABLE `review_comment` (
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
 
