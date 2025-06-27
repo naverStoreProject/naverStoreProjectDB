@@ -68,8 +68,8 @@ CREATE TABLE `product` (
   `brand` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `thumbnail_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
-  `main_category` int NOT NULL DEFAULT '999',
-  `sub_category` int NOT NULL DEFAULT '999',
+  `main_category` int NOT NULL DEFAULT '999999',
+  `sub_category` int NOT NULL DEFAULT '999999',
   `original_price` int NOT NULL DEFAULT '0',
   `discount_rate` int NOT NULL DEFAULT '0',
   `stock_quantity` int NOT NULL DEFAULT '0',
@@ -77,7 +77,7 @@ CREATE TABLE `product` (
   `rating_count` int NOT NULL DEFAULT '0',
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `review`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
