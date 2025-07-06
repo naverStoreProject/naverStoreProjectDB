@@ -57,16 +57,17 @@ CREATE TABLE `member` (
   `phone` varchar(255) DEFAULT NULL,
   `pwd` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 INSERT INTO `member` (`authority`, `status`, `id`, `join_date`, `updated_at`, `address`, `email`, `name`, `nickname`, `phone`, `pwd`) VALUES (1,_binary '\0',1,'2025-05-14 06:05:38.007593','2025-05-14 06:05:38.007593','A0qkWUP9l7wD2F4L+fq+kA==','cseongbo17@gmail.com','최성보','cseongbo','IagLsE0th6mFtqioK4+5pw==','$2a$10$AJrrrYHf7QXMkodiT9EcJeHT2bHe5Cl22ygIpLQKmR7L4h0YNnya2');
-INSERT INTO `member` (`authority`, `status`, `id`, `join_date`, `updated_at`, `address`, `email`, `name`, `nickname`, `phone`, `pwd`) VALUES (1,_binary '\0',5,'2025-05-31 13:07:53.781985','2025-05-31 13:07:53.781969','0HlSPVfskC2gA4JQpLEzHg==','cseunga@gmail.com','최승아','winA','6qbg9wxf0q0SuWXk97LZew==','$2a$10$UAv0yc8w6FIMVPaTq1Aj5..GIqdTjIexZDmhDkWQmruPOQjRlyOC.');
+INSERT INTO `member` (`authority`, `status`, `id`, `join_date`, `updated_at`, `address`, `email`, `name`, `nickname`, `phone`, `pwd`) VALUES (1,_binary '\0',5,'2025-05-31 13:07:53.781985','2025-05-31 13:07:53.781969','0HlSPVfskC2gA4JQpLEzHg==','cseunga@gmail.com','최승아','winA','6qbg9wxf0q0SuWXk97LZew==','$2a$10$AJrrrYHf7QXMkodiT9EcJeHT2bHe5Cl22ygIpLQKmR7L4h0YNnya2');
 INSERT INTO `member` (`authority`, `status`, `id`, `join_date`, `updated_at`, `address`, `email`, `name`, `nickname`, `phone`, `pwd`) VALUES (1,_binary '\0',6,'2025-05-31 13:14:33.627071','2025-05-31 13:14:33.627053','WRWCa2npLwKVbwAnwu5Okw==','kchangyoung@gmail.com','김창영','kchy0625','6qbg9wxf0q0SuWXk97LZew==','$2a$10$.0WKxSAWj4wfmCNeSgJH3u15GGC/BVJWJQtUn18xRo1J64Hvbu3LS');
 INSERT INTO `member` (`authority`, `status`, `id`, `join_date`, `updated_at`, `address`, `email`, `name`, `nickname`, `phone`, `pwd`) VALUES (1,_binary '\0',7,'2025-05-31 13:15:30.627474','2025-05-31 13:15:30.627463','nwenTRCn7pCwVqlquIlOeezvJDYURH+BUYkKPIKB6c8=','hbyeonggun@gmail.com','황병권','laeongmulti','/HBIxMVR/bV/m3AdwOpxbw==','$2a$10$rkem29e2vU06jPVck0zMPObIXLLInVDQboshON0ZoeVnW7RML/z4u');
 INSERT INTO `member` (`authority`, `status`, `id`, `join_date`, `updated_at`, `address`, `email`, `name`, `nickname`, `phone`, `pwd`) VALUES (1,_binary '\0',8,'2025-05-31 13:16:22.969493','2025-05-31 13:16:22.969472','0HlSPVfskC2gA4JQpLEzHg==','pdonghee@gmail.com','박동희','ParkPark8','h7D/yxVepBNEdS6OZq2Ryw==','$2a$10$g/wLLzIE7t80FWZKVX8CY.2p55CMB6DUTpesWeWrqeT5b/DTCXOAq');
 INSERT INTO `member` (`authority`, `status`, `id`, `join_date`, `updated_at`, `address`, `email`, `name`, `nickname`, `phone`, `pwd`) VALUES (1,_binary '\0',9,'2025-05-31 13:17:21.479784','2025-05-31 13:17:21.479773','0HlSPVfskC2gA4JQpLEzHg==','lsangmyeong@gmail.com','이상명','smLee-code','5vDOW2DmoIzpGGrPnzux5A==','$2a$10$mvwfyU4T8z9Y6TYRBhZ5MOpxDNOuny1/8NqPWBKGXhZxncpKx1co.');
 INSERT INTO `member` (`authority`, `status`, `id`, `join_date`, `updated_at`, `address`, `email`, `name`, `nickname`, `phone`, `pwd`) VALUES (1,_binary '\0',10,'2025-05-31 13:17:56.990927','2025-05-31 13:17:56.990899','0HlSPVfskC2gA4JQpLEzHg==','ahongyoung@gmail.com','안홍영','inredzero','6J080AVuS8QqPR3lA57dbA==','$2a$10$2A8Cp5JE9BR/3NveBkR32uuYflpvPPSP4syegh7muI.EgxO1d6Uiy');
+INSERT INTO `member` (`authority`, `status`, `id`, `join_date`, `updated_at`, `address`, `email`, `name`, `nickname`, `phone`, `pwd`) VALUES (1,_binary '\0',15,'2025-06-30 16:25:18.077339','2025-06-30 16:25:18.077324','nwenTRCn7pCwVqlquIlOedhXlafxmFWG+MdbboIdXVRgawnveEvFf3a2FhIzx1K6','wina@test.com','승아최','wina','IagLsE0th6mFtqioK4+5pw==','$2a$10$kxcfVPARE530xfPXVpLUxegiG2ZrXZAFWb/XGReW3TB6Jote.HOKW');
 DROP TABLE IF EXISTS `member_wishlist`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
@@ -85,6 +86,154 @@ INSERT INTO `member_wishlist` (`id`, `member_id`, `product_id`) VALUES (6,1,1);
 INSERT INTO `member_wishlist` (`id`, `member_id`, `product_id`) VALUES (7,1,2);
 INSERT INTO `member_wishlist` (`id`, `member_id`, `product_id`) VALUES (8,5,2);
 INSERT INTO `member_wishlist` (`id`, `member_id`, `product_id`) VALUES (9,10,2);
+DROP TABLE IF EXISTS `order_group`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `order_group` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `member_id` bigint NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `member_id` (`member_id`),
+  CONSTRAINT `order_group_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (1,1);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (2,1);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (3,1);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (4,1);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (5,1);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (6,5);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (7,5);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (8,5);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (9,5);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (10,5);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (11,6);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (12,6);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (13,6);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (14,6);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (15,6);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (16,7);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (17,7);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (18,7);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (19,7);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (20,7);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (21,8);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (22,8);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (23,8);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (24,8);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (25,8);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (26,9);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (27,9);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (28,9);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (29,9);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (30,9);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (31,10);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (32,10);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (33,10);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (34,10);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (35,10);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (36,15);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (37,15);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (38,15);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (39,15);
+INSERT INTO `order_group` (`id`, `member_id`) VALUES (40,15);
+DROP TABLE IF EXISTS `order_item`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `order_item` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `order_group_id` bigint NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `detail` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `count` int DEFAULT NULL,
+  `price` int DEFAULT NULL,
+  `link` varchar(255) DEFAULT NULL,
+  `order_time` datetime DEFAULT NULL,
+  `status` varchar(50) DEFAULT NULL,
+  `status_changed_time` datetime DEFAULT NULL,
+  `company` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `order_group_id` (`order_group_id`),
+  CONSTRAINT `order_item_ibfk_1` FOREIGN KEY (`order_group_id`) REFERENCES `order_group` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (1,1,'상품1','옵션1','https://placehold.co/300x300',1,1000,'http://example.com/1','2025-06-27 14:57:28','주문완료','2025-06-27 14:57:28','회사A');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (2,1,'상품2','옵션2','https://placehold.co/300x300',2,2000,'http://example.com/2','2025-06-27 14:57:28','배송준비중','2025-06-27 14:57:28','회사B');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (3,1,'상품3','옵션3','https://placehold.co/300x300',3,3000,'http://example.com/3','2025-06-27 14:57:28','배송중','2025-06-27 14:57:28','회사C');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (4,1,'상품4','옵션4','https://placehold.co/300x300',4,4000,'http://example.com/4','2025-06-27 14:57:28','배송완료','2025-06-27 14:57:28','회사D');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (5,1,'상품5','옵션5','https://placehold.co/300x300',5,5000,'http://example.com/5','2025-06-27 14:57:28','구매확정','2025-06-27 14:57:28','회사E');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (6,1,'상품6','옵션6','https://placehold.co/300x300',6,6000,'http://example.com/6','2025-06-27 14:57:28','교환완료','2025-06-27 14:57:28','회사F');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (7,1,'상품7','옵션7','https://placehold.co/300x300',7,7000,'http://example.com/7','2025-06-27 14:57:28','환불완료','2025-06-27 14:57:28','회사G');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (8,1,'상품8','옵션8','https://placehold.co/300x300',8,8000,'http://example.com/8','2025-06-27 14:57:28','주문완료','2025-06-27 14:57:28','회사H');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (9,1,'상품9','옵션9','https://placehold.co/300x300',9,9000,'http://example.com/9','2025-06-27 14:57:28','배송준비중','2025-06-27 14:57:28','회사I');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (10,1,'상품10','옵션10','https://placehold.co/300x300',10,10000,'http://example.com/10','2025-06-27 14:57:28','배송중','2025-06-27 14:57:28','회사J');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (11,5,'상품1','옵션1','https://placehold.co/300x300',1,1000,'http://example.com/1','2025-06-27 15:01:02','주문완료','2025-06-27 15:01:02','회사A');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (12,5,'상품2','옵션2','https://placehold.co/300x300',2,2000,'http://example.com/2','2025-06-27 15:01:02','배송준비중','2025-06-27 15:01:02','회사B');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (13,5,'상품3','옵션3','https://placehold.co/300x300',3,3000,'http://example.com/3','2025-06-27 15:01:02','배송중','2025-06-27 15:01:02','회사C');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (14,5,'상품4','옵션4','https://placehold.co/300x300',4,4000,'http://example.com/4','2025-06-27 15:01:02','배송완료','2025-06-27 15:01:02','회사D');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (16,5,'상품6','옵션6','https://placehold.co/300x300',6,6000,'http://example.com/6','2025-06-27 15:01:02','교환완료','2025-06-27 15:01:02','회사F');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (17,5,'상품7','옵션7','https://placehold.co/300x300',7,7000,'http://example.com/7','2025-06-27 15:01:02','환불완료','2025-06-27 15:01:02','회사G');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (18,5,'상품8','옵션8','https://placehold.co/300x300',8,8000,'http://example.com/8','2025-06-27 15:01:02','주문완료','2025-06-27 15:01:02','회사H');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (19,5,'상품9','옵션9','https://placehold.co/300x300',9,9000,'http://example.com/9','2025-06-27 15:01:02','배송준비중','2025-06-27 15:01:02','회사I');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (20,5,'상품10','옵션10','https://placehold.co/300x300',10,10000,'http://example.com/10','2025-06-27 15:01:02','배송중','2025-06-27 15:01:02','회사J');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (21,6,'상품1','옵션1','https://placehold.co/300x300',1,1000,'http://example.com/1','2025-06-27 15:01:02','주문완료','2025-06-27 15:01:02','회사A');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (22,6,'상품2','옵션2','https://placehold.co/300x300',2,2000,'http://example.com/2','2025-06-27 15:01:02','배송준비중','2025-06-27 15:01:02','회사B');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (23,6,'상품3','옵션3','https://placehold.co/300x300',3,3000,'http://example.com/3','2025-06-27 15:01:02','배송중','2025-06-27 15:01:02','회사C');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (24,6,'상품4','옵션4','https://placehold.co/300x300',4,4000,'http://example.com/4','2025-06-27 15:01:02','배송완료','2025-06-27 15:01:02','회사D');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (25,6,'상품5','옵션5','https://placehold.co/300x300',5,5000,'http://example.com/5','2025-06-27 15:01:02','구매확정','2025-06-27 15:01:02','회사E');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (26,6,'상품6','옵션6','https://placehold.co/300x300',6,6000,'http://example.com/6','2025-06-27 15:01:02','교환완료','2025-06-27 15:01:02','회사F');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (27,6,'상품7','옵션7','https://placehold.co/300x300',7,7000,'http://example.com/7','2025-06-27 15:01:02','환불완료','2025-06-27 15:01:02','회사G');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (28,6,'상품8','옵션8','https://placehold.co/300x300',8,8000,'http://example.com/8','2025-06-27 15:01:02','주문완료','2025-06-27 15:01:02','회사H');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (29,6,'상품9','옵션9','https://placehold.co/300x300',9,9000,'http://example.com/9','2025-06-27 15:01:02','배송준비중','2025-06-27 15:01:02','회사I');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (30,6,'상품10','옵션10','https://placehold.co/300x300',10,10000,'http://example.com/10','2025-06-27 15:01:02','배송중','2025-06-27 15:01:02','회사J');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (31,7,'상품1','옵션1','https://placehold.co/300x300',1,1000,'http://example.com/1','2025-06-27 15:01:02','주문완료','2025-06-27 15:01:02','회사A');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (32,7,'상품2','옵션2','https://placehold.co/300x300',2,2000,'http://example.com/2','2025-06-27 15:01:02','배송준비중','2025-06-27 15:01:02','회사B');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (33,7,'상품3','옵션3','https://placehold.co/300x300',3,3000,'http://example.com/3','2025-06-27 15:01:02','배송중','2025-06-27 15:01:02','회사C');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (34,7,'상품4','옵션4','https://placehold.co/300x300',4,4000,'http://example.com/4','2025-06-27 15:01:02','배송완료','2025-06-27 15:01:02','회사D');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (35,7,'상품5','옵션5','https://placehold.co/300x300',5,5000,'http://example.com/5','2025-06-27 15:01:02','구매확정','2025-06-27 15:01:02','회사E');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (36,7,'상품6','옵션6','https://placehold.co/300x300',6,6000,'http://example.com/6','2025-06-27 15:01:02','교환완료','2025-06-27 15:01:02','회사F');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (37,7,'상품7','옵션7','https://placehold.co/300x300',7,7000,'http://example.com/7','2025-06-27 15:01:02','환불완료','2025-06-27 15:01:02','회사G');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (38,7,'상품8','옵션8','https://placehold.co/300x300',8,8000,'http://example.com/8','2025-06-27 15:01:02','주문완료','2025-06-27 15:01:02','회사H');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (39,7,'상품9','옵션9','https://placehold.co/300x300',9,9000,'http://example.com/9','2025-06-27 15:01:02','배송준비중','2025-06-27 15:01:02','회사I');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (40,7,'상품10','옵션10','https://placehold.co/300x300',10,10000,'http://example.com/10','2025-06-27 15:01:02','배송중','2025-06-27 15:01:02','회사J');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (41,8,'상품1','옵션1','https://placehold.co/300x300',1,1000,'http://example.com/1','2025-06-27 15:01:02','주문완료','2025-06-27 15:01:02','회사A');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (42,8,'상품2','옵션2','https://placehold.co/300x300',2,2000,'http://example.com/2','2025-06-27 15:01:02','배송준비중','2025-06-27 15:01:02','회사B');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (43,8,'상품3','옵션3','https://placehold.co/300x300',3,3000,'http://example.com/3','2025-06-27 15:01:02','배송중','2025-06-27 15:01:02','회사C');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (44,8,'상품4','옵션4','https://placehold.co/300x300',4,4000,'http://example.com/4','2025-06-27 15:01:02','배송완료','2025-06-27 15:01:02','회사D');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (45,8,'상품5','옵션5','https://placehold.co/300x300',5,5000,'http://example.com/5','2025-06-27 15:01:02','구매확정','2025-06-27 15:01:02','회사E');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (46,8,'상품6','옵션6','https://placehold.co/300x300',6,6000,'http://example.com/6','2025-06-27 15:01:02','교환완료','2025-06-27 15:01:02','회사F');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (47,8,'상품7','옵션7','https://placehold.co/300x300',7,7000,'http://example.com/7','2025-06-27 15:01:02','환불완료','2025-06-27 15:01:02','회사G');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (48,8,'상품8','옵션8','https://placehold.co/300x300',8,8000,'http://example.com/8','2025-06-27 15:01:02','주문완료','2025-06-27 15:01:02','회사H');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (49,8,'상품9','옵션9','https://placehold.co/300x300',9,9000,'http://example.com/9','2025-06-27 15:01:02','배송준비중','2025-06-27 15:01:02','회사I');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (50,8,'상품10','옵션10','https://placehold.co/300x300',10,10000,'http://example.com/10','2025-06-27 15:01:02','배송중','2025-06-27 15:01:02','회사J');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (51,9,'상품1','옵션1','https://placehold.co/300x300',1,1000,'http://example.com/1','2025-06-27 15:01:02','주문완료','2025-06-27 15:01:02','회사A');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (52,9,'상품2','옵션2','https://placehold.co/300x300',2,2000,'http://example.com/2','2025-06-27 15:01:02','배송준비중','2025-06-27 15:01:02','회사B');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (53,9,'상품3','옵션3','https://placehold.co/300x300',3,3000,'http://example.com/3','2025-06-27 15:01:02','배송중','2025-06-27 15:01:02','회사C');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (54,9,'상품4','옵션4','https://placehold.co/300x300',4,4000,'http://example.com/4','2025-06-27 15:01:02','배송완료','2025-06-27 15:01:02','회사D');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (55,9,'상품5','옵션5','https://placehold.co/300x300',5,5000,'http://example.com/5','2025-06-27 15:01:02','구매확정','2025-06-27 15:01:02','회사E');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (56,9,'상품6','옵션6','https://placehold.co/300x300',6,6000,'http://example.com/6','2025-06-27 15:01:02','교환완료','2025-06-27 15:01:02','회사F');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (57,9,'상품7','옵션7','https://placehold.co/300x300',7,7000,'http://example.com/7','2025-06-27 15:01:02','환불완료','2025-06-27 15:01:02','회사G');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (58,9,'상품8','옵션8','https://placehold.co/300x300',8,8000,'http://example.com/8','2025-06-27 15:01:02','주문완료','2025-06-27 15:01:02','회사H');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (59,9,'상품9','옵션9','https://placehold.co/300x300',9,9000,'http://example.com/9','2025-06-27 15:01:02','배송준비중','2025-06-27 15:01:02','회사I');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (60,9,'상품10','옵션10','https://placehold.co/300x300',10,10000,'http://example.com/10','2025-06-27 15:01:02','배송중','2025-06-27 15:01:02','회사J');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (61,10,'상품1','옵션1','https://placehold.co/300x300',1,1000,'http://example.com/1','2025-06-27 15:01:02','주문완료','2025-06-27 15:01:02','회사A');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (62,10,'상품2','옵션2','https://placehold.co/300x300',2,2000,'http://example.com/2','2025-06-27 15:01:02','배송준비중','2025-06-27 15:01:02','회사B');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (63,10,'상품3','옵션3','https://placehold.co/300x300',3,3000,'http://example.com/3','2025-06-27 15:01:02','배송중','2025-06-27 15:01:02','회사C');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (64,10,'상품4','옵션4','https://placehold.co/300x300',4,4000,'http://example.com/4','2025-06-27 15:01:02','배송완료','2025-06-27 15:01:02','회사D');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (65,10,'상품5','옵션5','https://placehold.co/300x300',5,5000,'http://example.com/5','2025-06-27 15:01:02','구매확정','2025-06-27 15:01:02','회사E');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (66,10,'상품6','옵션6','https://placehold.co/300x300',6,6000,'http://example.com/6','2025-06-27 15:01:02','교환완료','2025-06-27 15:01:02','회사F');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (67,10,'상품7','옵션7','https://placehold.co/300x300',7,7000,'http://example.com/7','2025-06-27 15:01:02','환불완료','2025-06-27 15:01:02','회사G');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (68,10,'상품8','옵션8','https://placehold.co/300x300',8,8000,'http://example.com/8','2025-06-27 15:01:02','주문완료','2025-06-27 15:01:02','회사H');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (69,10,'상품9','옵션9','https://placehold.co/300x300',9,9000,'http://example.com/9','2025-06-27 15:01:02','배송준비중','2025-06-27 15:01:02','회사I');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (70,10,'상품10','옵션10','https://placehold.co/300x300',10,10000,'http://example.com/10','2025-06-27 15:01:02','배송중','2025-06-27 15:01:02','회사J');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (71,36,'상품1','옵션1','https://placehold.co/300x300',1,1000,'http://example.com/1','2025-06-30 07:33:45','주문완료','2025-06-30 07:33:45','회사A');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (72,37,'상품2','옵션2','https://placehold.co/300x300',2,2000,'http://example.com/2','2025-06-30 07:33:45','배송준비중','2025-06-30 07:33:45','회사B');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (73,38,'상품3','옵션3','https://placehold.co/300x300',3,3000,'http://example.com/3','2025-06-30 07:33:45','배송중','2025-06-30 07:33:45','회사C');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (74,39,'상품4','옵션4','https://placehold.co/300x300',4,4000,'http://example.com/4','2025-06-30 07:33:45','배송완료','2025-06-30 07:33:45','회사D');
+INSERT INTO `order_item` (`id`, `order_group_id`, `title`, `detail`, `image`, `count`, `price`, `link`, `order_time`, `status`, `status_changed_time`, `company`) VALUES (75,40,'상품5','옵션5','https://placehold.co/300x300',5,5000,'http://example.com/5','2025-06-30 07:33:45','구매확정','2025-06-30 07:33:45','회사E');
 DROP TABLE IF EXISTS `product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
